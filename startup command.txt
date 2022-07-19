@@ -1,0 +1,45 @@
+in order to start django project you have to create a server first to do that 
+go to your cmd or anaconda shell cmd go to path/ folder where you want your server and type command 
+django-admin startproject myproject
+
+here django-admin startproject is command and my project refers to your project name 
+after that folder is created in that path name as my project and in it certain files are also present 
+but our main file is manager.py file 
+in order to star server go to cmd , go into your project file and type command 
+
+python manage.py runserver 
+
+this will create your server at your local host / 127.0.0.1:8000
+
+in order to create a app in our django dir type command 
+python manage.py startapp myapp
+
+here python manage.py startapp is command and my app refers to name of your app 
+
+for migrations of our main project and our app we use command(this will migrate all your conttent and authentication data 
+into your main app)
+python manage.py migrate
+
+for any change related to migration type (for example we make changes to our models file) we use command 
+python manage.py makemigrations main
+
+here python manage.py makemigrations is command and main is our app name (note:- changes would not apply untill you
+re run the command - python manage.py migrate, this will save changes in migration)
+
+
+python manage.py shell 
+this will open cmd shell for your python file
+
+python manage.py createsuperuser
+this will create a django administrator account to login first in admin pannel
+
+
+ {% if user.is_authenticated %}
+                    {% block content %}
+                    {% endblock %}
+                {% else %}
+                    <p>to get acces login <a href="/login"> here </a></p>
+                {% endif %}
+
+this code will help you to restrict access and authenticate only those who are user or else they need to create account
+

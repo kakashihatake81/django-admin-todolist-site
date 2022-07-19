@@ -1,0 +1,30 @@
+{%extends "main/base.html" %}
+{%block title%} view list {%endblock%}
+
+{%block content%}
+
+    <h1> {{ls.name}} </h1>
+    <form method="post" action="#">
+        {% csrf_token %}
+        {% for items in ls.ToDoList.all %}
+        <div class="input-group mb-3">
+            <div class="input-group-prepend"
+                <div class="input-group-text">
+                    <li>{{item.text}}</li>
+                </div>
+            </div>
+            <input type="text", value="{{item.text}}" class="form-control">
+        </div>
+        {% endfor %}
+        
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">  
+                <button type="submit", name="newItem", value="newItem" class="btn btn-success">Add Item</button>
+            </div>
+            <input type="text", name="new">
+        </div>
+        <button type="submit", name="save", value="save" class="btn btn-success">Save</button>
+        
+    </form>
+
+{%endblock%}

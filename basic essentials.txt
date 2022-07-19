@@ -1,0 +1,13 @@
+two way of sending  info to server is POST method and Get method 
+both have its own security benefits 
+
+## for sendding password and modifing database make sure to use post because its encrypted and nnormal user cant able to
+ see the info that its sending to server.
+
+## for modifying and getting info of simple stuff or things that dont have much valuable info use get 
+this will usually works on html code and not encrypt anything like post method. 
+
+if you want to add bootsrap to your website (for more enhanced look and style) here is the documentation by which you can 
+able to add bootstrap style sheet to your website via href method 
+https://getbootstrap.com/docs/4.3/components/buttons/
+https://getbootstrap.com/docs/4.3/getting-started/introduction/
